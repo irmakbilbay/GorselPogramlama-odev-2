@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="odev_2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:odev_2"
+    Shell.FlyoutBehavior="Flyout"
+    Title="odev_2">
+
+    <FlyoutItem Icon="house.png" Title="Ana Sayfa">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage"/>
+    </FlyoutItem>
+    <FlyoutItem  Icon="card.png"  Title="Kredi Hesapla">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:KrediHesapla}"
+        Route="KrediHesapla"/>
+    </FlyoutItem>
+    <FlyoutItem Icon="bmi.png" Title="Vücut Kitle İndeksi">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:VkiHesapla}"
+        Route="VkiHesapla"/>
+    </FlyoutItem>
+    <FlyoutItem Icon="rgb.png" Title="Renk Seçici">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:RenkSecici}"
+        Route="RenkSecici"/>
+    </FlyoutItem>
+
+
+</Shell>

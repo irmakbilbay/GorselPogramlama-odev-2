@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="odev_2.RenkSecici"
+             Title="Renk Seçici">
+    <VerticalStackLayout Spacing="10">
+        <Label Text="Renk Seçici" 
+           FontSize="24" 
+           FontAttributes="Bold" 
+           HorizontalOptions="Center"/>
+        <Border Stroke="#6074C9"
+            StrokeThickness="4"
+            StrokeShape="RoundRectangle 10"
+            Padding="20"
+            HorizontalOptions="Center"
+            WidthRequest="380"
+            HeightRequest="350">
+            <VerticalStackLayout>
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Kırmızı:" 
+                   FontSize="20" 
+                   VerticalOptions="Center"/>
+                    <Label x:Name="redValueLabel" 
+                   Text="128" 
+                   FontSize="20" 
+                   VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <Slider x:Name="redSlider" 
+                    Minimum="0" 
+                    Maximum="255" 
+                    Value="128"
+                    ValueChanged="Slider_ValueChanged"/>
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Yeşil:" 
+                   FontSize="20" 
+                   VerticalOptions="Center"/>
+                    <Label x:Name="greenValueLabel" 
+                   Text="128" 
+                   FontSize="20" 
+                   VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <Slider x:Name="greenSlider" 
+                    Minimum="0" 
+                    Maximum="255" 
+                    Value="128"
+                    ValueChanged="Slider_ValueChanged"/>
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Mavi:" 
+                   FontSize="20" 
+                   VerticalOptions="Center"/>
+                    <Label x:Name="blueValueLabel" 
+                   Text="128" 
+                   FontSize="20" 
+                   VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <Slider x:Name="blueSlider" 
+                    Minimum="0" 
+                    Maximum="255" 
+                    Value="128"
+                    ValueChanged="Slider_ValueChanged"/>
+                <Label x:Name="colorCodeLabel" 
+               Text="#808080" 
+               FontSize="20" 
+               HorizontalOptions="Center" 
+               Padding="10"/>
+                <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+                    <Button Text="Kopyala" 
+                Clicked="CopyButton_Clicked" 
+                WidthRequest="120"/>
+                    <Button Text="Rastgele Renk" 
+                Clicked="RandomColorButton_Clicked" 
+                WidthRequest="120"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border >
+        <Border x:Name="border" StrokeThickness="4"
+            StrokeShape="RoundRectangle 10"
+            Padding="20"
+            HorizontalOptions="Center"
+            WidthRequest="380"
+            HeightRequest="350">
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>

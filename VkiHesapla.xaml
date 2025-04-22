@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="odev_2.VkiHesapla"
+             Title="Vücut Kitle İndeksi Hesapla">
+    <VerticalStackLayout Margin="10" Spacing="15">
+        <Label Text="VKİ=KG/(BOY*BOY)" FontSize="25" HorizontalOptions="Center" TextColor="DarkGreen" />
+        <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+            <Label Text="Kilogram(kg):" FontSize="20" VerticalOptions="Center"/>
+            <Entry WidthRequest="90"  Text="{Binding SliderValue, Mode=TwoWay ,StringFormat='{0:F2}'}" Keyboard="Numeric" FontSize="20" />
+        </HorizontalStackLayout>
+        <Slider x:Name="slider" Minimum="1" Maximum="200" Value="{Binding SliderValue, Mode=TwoWay}" ThumbColor="Green" />
+        <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+            <Label Text="Boy(cm):" FontSize="20" VerticalOptions="Center"/>
+            <Entry WidthRequest="90"  Text="{Binding SliderValue2, Mode=TwoWay}" Keyboard="Numeric" FontSize="20" />
+        </HorizontalStackLayout>
+        <Slider x:Name="slider2" Minimum="1" Maximum="300" Value="{Binding SliderValue2, Mode=TwoWay}" ThumbColor="Green" />
+        <Button Text="Hesapla" Clicked="Button_Clicked" BackgroundColor="DarkGreen"/>
+        <Label x:Name="sonucLabel" FontSize="20" TextColor="DarkBlue" VerticalOptions="Center" HorizontalOptions="Center" />
+    </VerticalStackLayout>
+
+</ContentPage>

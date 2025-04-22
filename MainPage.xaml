@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="odev_2.MainPage"
+             Title="Ana Sayfa">
+
+    <VerticalStackLayout VerticalOptions="Center" Spacing="10" >
+        <Image Source="resim.jpeg"  WidthRequest="300" HeightRequest="300" HorizontalOptions="Center"/>
+        <Label Text="Irmak Bilbay" FontSize="25"  HorizontalOptions="Center" />
+        <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği" FontSize="20" HorizontalOptions="Center"/>
+        <Label Text="ÖDEV-2" FontSize="25" HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+
+</ContentPage>
